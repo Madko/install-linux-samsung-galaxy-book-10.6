@@ -76,15 +76,17 @@ Soon.
     linux@tablet:~$ lsmod > output/lsmod.txt
     linux@tablet:~$
 
-See the output in [output/lsmod.txt](output/lsmod.txt)
-See the output with Fedora 31 in [output/lsmod_fedora31.txt](output/lsmod_fedora31.txt)
+See the output in [output/lsmod.txt](output/lsmod.txt).
+
+See the output with Fedora 31 in [output/lsmod_fedora31.txt](output/lsmod_fedora31.txt).
 
 ### lscpu
 
     linux@tablet:~$ lscpu > output/lscpu.txt
 
-See the output in [output/lscpu.txt](output/lscpu.txt)
-See the output with Fedora 31 in [output/lscpu_fedora31.txt](output/lscpu_fedora31.txt)
+See the output in [output/lscpu.txt](output/lscpu.txt).
+
+See the output with Fedora 31 in [output/lscpu_fedora31.txt](output/lscpu_fedora31.txt).
 
 ### cat /proc/cpuinfo
 
@@ -106,7 +108,8 @@ Soon.
     linux@tablet:~$
 
 See the output in [output/dmesg.txt](output/dmesg.txt).
-See the output with Fedora 31 in [output/dmesg_fedora31.txt](output/dmesg_fedora31.txt)
+
+See the output with Fedora 31 in [output/dmesg_fedora31.txt](output/dmesg_fedora31.txt).
 
 
 ### Thermal sensors 

@@ -1,0 +1,202 @@
+Module                  Size  Used by
+binfmt_misc             6632  1
+x86_pkg_temp_thermal     5345  0
+coretemp                5884  0
+kvm_intel             159209  0
+mmc_block              24698  0
+ath10k_pci             27766  0
+kvm                   298938  1 kvm_intel
+ath10k_core           190808  1 ath10k_pci
+ath                    19666  1 ath10k_core
+irqbypass               3455  1 kvm
+cdc_ether               5546  0
+mac80211              346581  1 ath10k_core
+crct10dif_pclmul        5269  0
+btusb                  26201  0
+usbnet                 24947  1 cdc_ether
+btrtl                   3752  1 btusb
+btbcm                   6872  1 btusb
+btintel                 8701  1 btusb
+cfg80211              221714  3 ath,mac80211,ath10k_core
+bluetooth             290130  5 btbcm,btrtl,btusb,btintel
+crc32_pclmul            2918  0
+crc32c_intel           12967  0
+ghash_clmulni_intel     3933  0
+serio_raw               4762  0
+pcspkr                  2094  0
+r8152                  30702  0
+i2c_i801               10796  0
+rfkill                 12435  2 cfg80211,bluetooth
+input_leds              3054  0
+joydev                  9069  0
+thermal                 9500  0
+i915                  962368  0
+wmi                     8928  0
+acpi_cpufreq            7098  0
+drm_kms_helper        107490  1 i915
+drm                   304875  2 i915,drm_kms_helper
+sdhci_pci              15407  0
+sdhci                  24537  1 sdhci_pci
+processor              26136  5 acpi_cpufreq
+mmc_core               94294  3 mmc_block,sdhci,sdhci_pci
+aesni_intel           158765  0
+lrw                     4006  1 aesni_intel
+glue_helper             4963  1 aesni_intel
+ablk_helper             2845  1 aesni_intel
+cryptd                  8905  3 ghash_clmulni_intel,aesni_intel,ablk_helper
+aes_x86_64              7915  1 aesni_intel
+iscsi_tcp               8863  0
+libiscsi_tcp           14338  1 iscsi_tcp
+libiscsi               39895  2 libiscsi_tcp,iscsi_tcp
+scsi_transport_iscsi    82684  2 iscsi_tcp,libiscsi
+vmxnet3                36049  0
+virtio_net             18731  0
+tg3                   130772  0
+libphy                 36892  1 tg3
+sky2                   43921  0
+r8169                  60733  0
+pcnet32                30351  0
+mii                     4846  4 r8152,r8169,usbnet,pcnet32
+igb                   124603  0
+ptp                    10627  2 igb,tg3
+pps_core                7313  1 ptp
+i2c_algo_bit            5403  2 igb,i915
+dca                     6514  1 igb
+e1000                  90876  0
+bnx2                   66331  0
+atl1c                  29626  0
+fuse                   73787  1
+zfs                  2632683  0
+zunicode              316308  1 zfs
+zcommon                38795  1 zfs
+znvpair                48093  2 zfs,zcommon
+spl                    67243  3 zfs,zcommon,znvpair
+zavl                    5009  1 zfs
+nfs                   138649  0
+lockd                  57396  1 nfs
+grace                   2571  1 lockd
+sunrpc                202691  2 nfs,lockd
+btrfs                 798022  0
+zlib_deflate           19082  2 spl,btrfs
+multipath               5522  0
+linear                  3287  0
+raid10                 34066  0
+raid1                  25215  0
+raid0                   5989  0
+dm_raid                15945  0
+raid456                71264  1 dm_raid
+async_raid6_recov       1880  1 raid456
+async_memcpy            1880  1 raid456
+async_pq                4732  1 raid456
+async_xor               3643  2 async_pq,raid456
+async_tx                2764  5 async_pq,raid456,async_xor,async_memcpy,async_raid6_recov
+xor                    10372  2 btrfs,async_xor
+raid6_pq               96203  4 async_pq,raid456,btrfs,async_raid6_recov
+dm_snapshot            27173  0
+dm_bufio               18787  1 dm_snapshot
+dm_crypt               16594  0
+dm_mirror              12069  0
+dm_region_hash         10098  1 dm_mirror
+dm_log                  8411  2 dm_region_hash,dm_mirror
+dm_mod                 86120  6 dm_raid,dm_log,dm_mirror,dm_bufio,dm_crypt,dm_snapshot
+firewire_core          51706  0
+hid_sunplus             1822  0
+hid_sony               13627  0
+hid_samsung             3170  0
+hid_pl                  2644  0
+hid_petalynx            2303  0
+hid_monterey            1886  0
+hid_microsoft           3673  0
+hid_gyration            2427  0
+hid_ezkey               1751  0
+hid_cypress             2143  0
+hid_chicony             2727  0
+hid_cherry              1886  0
+hid_belkin              1967  0
+hid_a4tech              2103  0
+sl811_hcd              11962  0
+usb_storage            51025  2
+aic94xx                65279  0
+libsas                 57895  1 aic94xx
+lpfc                  550556  0
+qla2xxx               521168  0
+megaraid_sas           95188  0
+megaraid_mbox          25720  0
+megaraid_mm             8133  1 megaraid_mbox
+megaraid               36517  0
+aacraid                75762  0
+sx8                    12354  0
+DAC960                 63203  0
+hpsa                   74913  0
+cciss                  46510  0
+3w_9xxx                30140  0
+3w_xxxx                21364  0
+3w_sas                 19032  0
+mptsas                 34153  0
+mptfc                  11161  0
+scsi_transport_fc      46748  3 lpfc,qla2xxx,mptfc
+mptspi                 11827  0
+mptscsih               21093  3 mptfc,mptsas,mptspi
+mptbase                63323  4 mptfc,mptsas,mptspi,mptscsih
+atp870u                16936  0
+dc395x                 27696  0
+qla1280                20672  0
+dmx3191d               10401  0
+sym53c8xx              63693  0
+gdth                   74460  0
+advansys               44102  0
+initio                 15050  0
+BusLogic               20437  0
+arcmsr                 32381  0
+aic7xxx               104318  0
+aic79xx               107773  0
+scsi_transport_spi     20297  5 mptspi,sym53c8xx,aic79xx,aic7xxx,dmx3191d
+sg                     23717  0
+pdc_adma                5891  0
+sata_inic162x           7120  0
+sata_mv                24780  0
+ata_piix               25755  0
+ahci                   26978  0
+libahci                24185  1 ahci
+sata_qstor              5758  0
+sata_vsc                4619  0
+sata_uli                3519  0
+sata_sis                4133  0
+sata_sx4                8528  0
+sata_nv                19873  0
+sata_via                8779  0
+sata_svw                4936  0
+sata_sil24             10930  0
+sata_sil                8093  0
+sata_promise           10478  0
+pata_sl82c105           4285  0
+pata_via                9454  0
+pata_jmicron            2919  0
+pata_marvell            3468  0
+pata_sis               12355  1 sata_sis
+pata_netcell            2776  0
+pata_pdc202xx_old       5091  0
+pata_triflex            3786  0
+pata_atiixp             5223  0
+pata_amd               11383  0
+pata_ali               10376  0
+pata_it8213             4154  0
+pata_pcmcia            10313  0
+pcmcia                 33206  1 pata_pcmcia
+pcmcia_core            14891  1 pcmcia
+pata_ns87415            3768  0
+pata_ns87410            3446  0
+pata_serverworks        6296  0
+pata_artop              5653  0
+pata_it821x             9591  0
+pata_hpt3x2n            6095  0
+pata_hpt3x3             3697  0
+pata_hpt37x            12553  0
+pata_hpt366             5583  0
+pata_cmd64x             7638  0
+pata_efar               4315  0
+pata_rz1000             3302  0
+pata_sil680             5398  0
+pata_radisys            3586  0
+pata_pdc2027x           7130  0
+pata_mpiix              3459  0
