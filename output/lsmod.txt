@@ -1,0 +1,91 @@
+Module                  Size  Used by
+ath10k_pci             40960  0
+ath10k_core           327680  1 ath10k_pci
+mac80211              647168  1 ath10k_core
+ath                    32768  1 ath10k_core
+cfg80211              667648  3 ath,mac80211,ath10k_core
+cmac                   16384  1
+rfcomm                 61440  2
+bnep                   24576  2
+8250_dw                20480  0
+snd_soc_skl           102400  0
+snd_soc_hdac_hda       24576  1 snd_soc_skl
+snd_hda_ext_core       32768  2 snd_soc_hdac_hda,snd_soc_skl
+snd_soc_skl_ipc        61440  1 snd_soc_skl
+snd_soc_sst_ipc        20480  1 snd_soc_skl_ipc
+snd_soc_sst_dsp        36864  1 snd_soc_skl_ipc
+snd_soc_acpi_intel_match    28672  1 snd_soc_skl
+snd_soc_acpi           16384  2 snd_soc_acpi_intel_match,snd_soc_skl
+snd_soc_core          237568  2 snd_soc_hdac_hda,snd_soc_skl
+snd_hda_codec_hdmi     61440  1
+snd_hda_codec_realtek   122880  1
+snd_compress           24576  1 snd_soc_core
+snd_hda_codec_generic    77824  1 snd_hda_codec_realtek
+ledtrig_audio          16384  2 snd_hda_codec_generic,snd_hda_codec_realtek
+snd_pcm_dmaengine      16384  1 snd_soc_core
+mei_hdcp               24576  0
+ac97_bus               16384  1 snd_soc_core
+snd_hda_intel          40960  3
+atkbd                  32768  0
+snd_hda_codec         126976  5 snd_hda_codec_generic,snd_hda_codec_hdmi,snd_hda_intel,snd_hda_codec_realtek,snd_soc_hdac_hda
+libps2                 20480  1 atkbd
+serio_raw              20480  0
+snd_hda_core           86016  8 snd_hda_codec_generic,snd_hda_codec_hdmi,snd_hda_intel,snd_hda_ext_core,snd_hda_codec,snd_hda_codec_realtek,snd_soc_hdac_hda,snd_soc_skl
+snd_hwdep              16384  1 snd_hda_codec
+snd_pcm               114688  8 snd_hda_codec_hdmi,snd_hda_intel,snd_hda_ext_core,snd_hda_codec,snd_soc_core,snd_soc_skl,snd_hda_core,snd_pcm_dmaengine
+snd_timer              36864  1 snd_pcm
+intel_pmc_core         28672  0
+i2c_i801               32768  0
+snd                    77824  15 snd_hda_codec_generic,snd_hda_codec_hdmi,snd_hwdep,snd_hda_intel,snd_hda_codec,snd_timer,snd_compress,snd_soc_core,snd_pcm
+ipu3_cio2              36864  0
+joydev                 24576  0
+soundcore              16384  1 snd
+v4l2_fwnode            28672  1 ipu3_cio2
+videobuf2_dma_sg       16384  1 ipu3_cio2
+btusb                  49152  0
+videobuf2_memops       20480  1 videobuf2_dma_sg
+videobuf2_v4l2         24576  1 ipu3_cio2
+hid_multitouch         28672  0
+btrtl                  20480  1 btusb
+cdc_ether              20480  0
+videobuf2_common       49152  2 ipu3_cio2,videobuf2_v4l2
+btbcm                  16384  1 btusb
+usbnet                 45056  1 cdc_ether
+btintel                20480  1 btusb
+videodev              200704  4 v4l2_fwnode,ipu3_cio2,videobuf2_v4l2,videobuf2_common
+r8152                  61440  0
+mei_me                 40960  1
+bluetooth             532480  31 btrtl,btintel,btbcm,bnep,btusb,rfcomm
+mei                   106496  3 mei_hdcp,mei_me
+media                  53248  4 videodev,ipu3_cio2,videobuf2_v4l2,videobuf2_common
+intel_pch_thermal      16384  0
+idma64                 20480  0
+virt_dma               20480  1 idma64
+intel_lpss_pci         20480  0
+ecdh_generic           24576  2 bluetooth
+rfkill                 28672  6 bluetooth,cfg80211
+intel_xhci_usb_role_switch    16384  0
+thermal                20480  0
+roles                  16384  1 intel_xhci_usb_role_switch
+intel_vbtn             20480  0
+pinctrl_sunrisepoint    28672  3
+pinctrl_intel          24576  2 pinctrl_sunrisepoint
+i8042                  28672  0
+soc_button_array       20480  0
+sparse_keymap          16384  1 intel_vbtn
+wmi                    28672  0
+int3403_thermal        16384  0
+i2c_hid                28672  0
+int3400_thermal        20480  0
+processor_thermal_device    20480  0
+int340x_thermal_zone    16384  2 int3403_thermal,processor_thermal_device
+intel_soc_dts_iosf     20480  1 processor_thermal_device
+acpi_thermal_rel       16384  1 int3400_thermal
+int3406_thermal        16384  0
+ac                     16384  0
+battery                20480  0
+pcc_cpufreq            20480  0
+overlay               110592  1
+sr_mod                 24576  0
+cdrom                  69632  1 sr_mod
+isofs                  49152  1
