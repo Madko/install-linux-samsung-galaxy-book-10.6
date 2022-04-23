@@ -2,7 +2,7 @@
 
 Sharing some experiences about running, more precisely trying to run, Linux on a Samsung Galaxy Book 10.8" x86 tablet.
 
-TLDR: WiFi and touchscreen are not working. So avoid this tablet.
+TLDR: Touchscreen is not working. So without attached keyboard, avoid this tablet.
 
 ## What works
 
@@ -11,17 +11,17 @@ Basic functionality is working (kernel ??) :
 * Keyboard
 * Touchpad
 * Adaptive brightness
+* WiFi (kernel 5.17+)
 
 I haven't tested much more than that.
 
 What seems buggy :
 
-* Touchscreen
 * Screen orientation
 
 What is not working :
 
-* WiFi
+* Touchscreen
 
 To be tested :
 
@@ -45,7 +45,7 @@ The tablet was delivered to me in the end of April 2019. It was saled on Ebay as
 
 The computer came with _Windows 10 Home_ installed.
 
-Download **Fedora 30 Workstation Live x86_64** and write it on an USB drive.
+Download **EndeavourOS 2022** and write it on an USB drive.
 
 Here is the steps to boot from the USB drive :
 
@@ -53,13 +53,13 @@ Here is the steps to boot from the USB drive :
 * On the boot screen displaying Samsung Galaxy Book Logo press **F10**
 * Choose the USB UEFI entry
 
-Boot the usual Fedora live session :
+Boot the usual live session :
 
 * Screen is in portrait mode :
   * open a terminal
   * type "xrandr -o left"
 
-Stop here, WiFi is not working at all. Touchscreen sometime kind of works, but not usable.
+WiFi is working. Touchscreen sometime kind of works, but not usable.
 
 ## Output from some commands
 
@@ -76,7 +76,7 @@ Soon.
     linux@tablet:~$ lsmod > output/lsmod.txt
     linux@tablet:~$
 
-See the output in [output/lsmod.txt](output/lsmod.txt).
+See the output with clearlinux2019 in [output/lsmod_clearlinux2019.txt](output/lsmod_clearlinux2019.txt).
 
 See the output with Fedora 31 in [output/lsmod_fedora31.txt](output/lsmod_fedora31.txt).
 
@@ -84,7 +84,7 @@ See the output with Fedora 31 in [output/lsmod_fedora31.txt](output/lsmod_fedora
 
     linux@tablet:~$ lscpu > output/lscpu.txt
 
-See the output in [output/lscpu.txt](output/lscpu.txt).
+See the output with clearlinux2019 in [output/lscpu_clearlinux2019.txt](output/lscpu_clearlinux2019.txt).
 
 See the output with Fedora 31 in [output/lscpu_fedora31.txt](output/lscpu_fedora31.txt).
 
@@ -107,7 +107,7 @@ Soon.
     linux@tablet:~$ dmesg > output/dmesg.txt
     linux@tablet:~$
 
-See the output in [output/dmesg.txt](output/dmesg.txt).
+See the output with clearlinux2019 in [output/dmesg_clearlinux2019.txt](output/dmesg_clearlinux2019.txt).
 
 See the output with Fedora 31 in [output/dmesg_fedora31.txt](output/dmesg_fedora31.txt).
 
