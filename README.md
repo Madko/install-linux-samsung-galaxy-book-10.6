@@ -4,6 +4,8 @@ Sharing some experiences about running, more precisely trying to run, Linux on a
 
 TLDR: Touchscreen is not working. So without attached keyboard, avoid this tablet.
 
+PS: Samsung Galaxy Book 10.6 or 10.8 ? dmidecode says 10.6.
+
 ## What works
 
 Basic functionality is working (kernel ??) :
@@ -69,12 +71,19 @@ WiFi is working. Touchscreen sometime kind of works, but not usable.
     [sudo] password for linux:
     linux@tablet:~$
 
-Soon.
+Soon. Crashing right now :
+
+```
+terminate called after throwing an instance of 'std::length_error'
+  what():  basic_string::_M_create
+```
 
 ### lsmod
 
     linux@tablet:~$ lsmod > output/lsmod.txt
     linux@tablet:~$
+
+See the output in [output/lsmod.txt](output/lsmod.txt).
 
 See the output with clearlinux2019 in [output/lsmod_clearlinux2019.txt](output/lsmod_clearlinux2019.txt).
 
@@ -83,6 +92,8 @@ See the output with Fedora 31 in [output/lsmod_fedora31.txt](output/lsmod_fedora
 ### lscpu
 
     linux@tablet:~$ lscpu > output/lscpu.txt
+
+See the output in [output/lscpu.txt](output/lscpu.txt).
 
 See the output with clearlinux2019 in [output/lscpu_clearlinux2019.txt](output/lscpu_clearlinux2019.txt).
 
@@ -93,19 +104,21 @@ See the output with Fedora 31 in [output/lscpu_fedora31.txt](output/lscpu_fedora
     linux@tablet:~$ cat /proc/cpuinfo > output/cpuinfo.txt
     linux@tablet:~$
 
-Soon.
+See the output in [output/cpuinfo.txt](output/cpuinfo.txt).
 
 ### cat /proc/meminfo
 
     linux@tablet:~$ cat /proc/meminfo > output/meminfo.txt
     linux@tablet:~$
 
-Soon.
+See the output in [output/meminfo.txt](output/meminfo.txt).
 
 ### dmesg
 
     linux@tablet:~$ dmesg > output/dmesg.txt
     linux@tablet:~$
+
+See the output in [output/dmesg.txt](output/dmesg.txt).
 
 See the output with clearlinux2019 in [output/dmesg_clearlinux2019.txt](output/dmesg_clearlinux2019.txt).
 
@@ -117,7 +130,7 @@ See the output with Fedora 31 in [output/dmesg_fedora31.txt](output/dmesg_fedora
     linux@tablet:~$ sensors > output/sensors.txt
     linux@tablet:~$
 
-Soon.
+See the output in [output/sensors.txt](output/sensors.txt).
 
 ## Other references
 
