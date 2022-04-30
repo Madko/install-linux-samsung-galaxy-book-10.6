@@ -24,10 +24,11 @@ What seems buggy :
 What is not working :
 
 * Touchscreen
+* Webcam
 
 To be tested :
 
-* Webcam
+* Bluetooth
 * Gyroscope
 
 ## Customization of the tablet
@@ -62,6 +63,8 @@ Boot the usual live session :
   * type "xrandr -o left"
 
 WiFi is working. Touchscreen sometime kind of works, but not usable.
+
+Battery life is good.
 
 ## Output from some commands
 
