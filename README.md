@@ -23,6 +23,7 @@ What seems buggy :
 
 What is not working :
 
+* Speakers
 * Touchscreen
 * Webcam
 
